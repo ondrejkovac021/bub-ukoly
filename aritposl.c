@@ -3,13 +3,15 @@
 
 int main()
 {
-    int a1 = 14;
-    int d[7] = {0}; 
-    int n = 13;
-    for(int i = 0; i < n; i++)
+    int a = 1;
+    int n = 8; 
+    int d = 2;
+    int pole[n];
+    pole[0] = a;
+    for(int i = 1; i < n; i++)
     {
-        d[n] += a1;
-    printf("%d|", d[n]);
+        pole[i] = d + pole[i - 1];
+    printf("%d|", pole[i]);
     }
     return 0;
 }
